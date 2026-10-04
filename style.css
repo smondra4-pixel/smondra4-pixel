@@ -24,7 +24,7 @@ img {
 /* ---------- Header ---------- */
 
 header {
-    background-color: #cd8240;
+    background-color: #19110A;
     color: #FDFCFB;
 }
 
@@ -98,7 +98,7 @@ nav a.active {
     min-height: 520px;
     display: grid;
     grid-template-columns: 1fr 1.3fr;
-    background-color: #cd8240;
+    background-color: #19110A;
     color: #FDFCFB;
 }
 
@@ -256,7 +256,7 @@ nav a.active {
     display: grid;
     grid-template-columns: 1fr 1fr;
     min-height: 350px;
-    background-color: #cd8240;
+    background-color: #19110A;
     color: #FDFCFB;
 }
 
@@ -285,10 +285,11 @@ nav a.active {
     color: #19110A;
 }
 
+
 /* ---------- Footer ---------- */
 
 footer {
-    background-color: #cd8240;
+    background-color: #19110A;
     color: #FDFCFB;
     border-top: 1px solid #55504A;
 }
@@ -417,4 +418,75 @@ footer {
     .logo h1 {
         font-size: 1.4em;
     }
+}
+/* ---------- Services Page ---------- */
+
+.services-intro {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3em 2em 2em;
+    text-align: center;
+}
+
+.services-intro h2 {
+    margin: 0;
+    font-size: 3em;
+}
+
+
+/* ---------- Service List ---------- */
+
+.service-list {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1em 2em 3em;
+}
+
+.service-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3em;
+    align-items: center;
+    margin-bottom: 3em;
+}
+
+.service-photo {
+    min-height: 280px;
+    background-color: #E6B58E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #19110A;
+}
+
+.service-description {
+    max-width: 500px;
+}
+
+.service-description h2 {
+    margin-top: 0;
+    font-size: 2.2em;
+}
+
+.service-description p {
+    line-height: 1.6;
+}
+
+
+/* ---------- Services Contact ---------- */
+
+.services-cta {
+    background-color: #F5EDE5;
+    text-align: center;
+    padding: 4em 2em;
+}
+
+.services-cta h2 {
+    margin-top: 0;
+    font-size: 2.5em;
+}
+
+.services-cta p {
+    max-width: 600px;
+    margin: 0 auto 1.5em;
 }
