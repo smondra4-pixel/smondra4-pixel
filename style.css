@@ -145,20 +145,21 @@ nav a.active {
     background-color: #E89B58;
 }
 
+
 .hero-image {
     min-height: 520px;
     background-color: #55504A;
-    background-image: linear-gradient(
-        rgba(25, 17, 10, 0.2),
-        rgba(25, 17, 10, 0.2)
-    );
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #FDFCFB;
-    font-size: 1.2em;
+    overflow: hidden;
 }
 
+.hero-image img {
+    display: block;
+    width: 100%;
+    height: 520px;
+    object-fit:contain;
+    object-position: center;
+    background-color: #19110A
+}
 
 /* ---------- Sections ---------- */
 
@@ -198,6 +199,12 @@ nav a.active {
     justify-content: center;
     color: #19110A;
 }
+.image-placeholder img {
+    display: block;
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+}
 
 
 /* ---------- Services ---------- */
@@ -215,7 +222,7 @@ nav a.active {
 
 .service-cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5em;
 }
 
@@ -232,6 +239,13 @@ nav a.active {
     align-items: center;
     justify-content: center;
     margin-bottom: 1em;
+}
+.service-image img {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 4px;
 }
 
 .service-card h3 {
@@ -366,6 +380,10 @@ footer {
     .hero-image {
         min-height: 350px;
     }
+    .hero-image img {
+        height: 350px;
+        object-fit: contain;
+    }
 
     .hero h2 {
         font-size: 2.8em;
@@ -458,6 +476,14 @@ footer {
     justify-content: center;
     color: #19110A;
 }
+.service-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    object-fit: cover;
+    border-radius: 4px;
+}
 
 .service-description {
     max-width: 500px;
@@ -547,3 +573,348 @@ footer {
         min-height: 250px;
     }
 }
+
+/* ---------- Contact Page ---------- */
+
+.contact-hero {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 4em 2em 2em;
+    text-align: center;
+}
+
+.contact-hero h2 {
+    margin: 0 0 0.5em;
+    font-size: 3em;
+}
+
+.contact-hero > p:last-child {
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.contact-container {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 2em 2em 5em;
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 3em;
+    align-items: start;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.contact-card {
+    background-color: #F5EDE5;
+    padding: 2em;
+    border-radius: 6px;
+}
+
+.contact-icon {
+    color: #CD8240;
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+.contact-card h3,
+.contact-note h3 {
+    margin: 0 0 0.5em;
+    font-size: 1.4em;
+}
+
+.contact-card p,
+.contact-note p {
+    line-height: 1.7;
+}
+
+.contact-detail {
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+.contact-note {
+    padding: 0.5em 0.5em 0;
+}
+
+.contact-form-section {
+    background-color: #FDFCFB;
+    padding: 2em;
+    border: 1px solid #E6B58E;
+    border-radius: 6px;
+}
+
+.contact-form-section h2 {
+    margin-top: 0;
+    font-size: 2em;
+}
+
+.contact-form-section > p {
+    line-height: 1.6;
+    margin-bottom: 1.5em;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6em;
+}
+
+.contact-form label {
+    font-weight: bold;
+    margin-top: 0.6em;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.9em;
+    border: 1px solid #D8C9BC;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    color: #19110A;
+    font: inherit;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form .button {
+    margin-top: 1em;
+    border: none;
+    cursor: pointer;
+    font: inherit;
+}
+
+@media (max-width: 800px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-hero h2 {
+        font-size: 2.3em;
+    }
+}
+
+@media (max-width: 500px) {
+    .contact-container {
+        padding: 1em 1em 3em;
+    }
+
+    .contact-form-section {
+        padding: 1.2em;
+    }
+
+    .contact-hero {
+        padding: 3em 1.2em 2em;
+    }
+}
+/* Service Areas Map Graphic */
+.areas-map {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 420px;
+    padding: 1.5em;
+    background-color: #F5EDE5;
+    border-radius: 10px;
+}
+
+.map-card {
+    width: 100%;
+    max-width: 420px;
+    padding: 2em;
+    text-align: center;
+    background-color: #FDFCFB;
+    border: 1px solid #E6B58E;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(25, 17, 10, 0.08);
+}
+
+.map-card h3 {
+    margin-top: 0.3em;
+    color: #19110A;
+}
+
+.map-illustration {
+    position: relative;
+    height: 170px;
+    margin: 1.5em 0;
+    overflow: hidden;
+    background-color: #F5EDE5;
+    border-radius: 8px;
+}
+
+.map-road {
+    position: absolute;
+    width: 150%;
+    height: 28px;
+    background-color: #E6B58E;
+    border: 3px solid #FDFCFB;
+    border-left: none;
+    border-right: none;
+}
+
+.map-road-one {
+    top: 45px;
+    left: -20%;
+    transform: rotate(25deg);
+}
+
+.map-road-two {
+    top: 100px;
+    left: -15%;
+    transform: rotate(-25deg);
+}
+
+.map-location {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    color: #FDFCFB;
+    font-weight: bold;
+    background-color: #CD8240;
+    border: 4px solid #FDFCFB;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(25, 17, 10, 0.2);
+    transform: translate(-50%, -50%);
+}
+
+.map-caption {
+    margin-bottom: 1.5em;
+    color: #55504A;
+    font-size: 0.95em;
+}
+/* Arizona Service Area Map */
+.areas-map {
+    width: 100%;
+    min-width: 0;
+    padding: 0;
+    background-color: #F5EDE5;
+    border: 1px solid #E6B58E;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.areas-map iframe {
+    display: block;
+    width: 100%;
+    height: 450px;
+    border: 0;
+}
+
+.areas-map .map-caption {
+    padding: 0.75em 1em;
+    margin: 0;
+    color: #55504A;
+    font-size: 0.9em;
+}
+
+@media (max-width: 800px) {
+    .areas-map iframe {
+        height: 350px;
+    }
+}
+
+/* Arizona Service Area Map */
+.areas-map {
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid #E89B58;
+    border-radius: 10px;
+    background-color: #F5EDE5;
+}
+
+.areas-map img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Homepage Service Areas */
+.home-service-areas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+    align-items: center;
+    padding: 3em 8%;
+    background-color: #F5EDE5;
+}
+
+.home-service-areas-text h2 {
+    color: #19110A;
+    margin-top: 0.3em;
+}
+
+.home-service-areas-text p {
+    line-height: 1.7;
+}
+
+.home-service-areas-map img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid #E89B58;
+    border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+    .home-service-areas {
+        grid-template-columns: 1fr;
+        padding: 2em 5%;
+    }
+}
+
+/* Crane Dragon Logo */
+.site-logo {
+    display: block;
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+/* Home Page Video Section */
+.home-video {
+    padding: 3em 8%;
+    text-align: center;
+    background-color: #FDFCFB;
+}
+
+.home-video h2 {
+    color: #19110A;
+    margin-top: 0.3em;
+}
+
+.home-video p {
+    line-height: 1.7;
+}
+
+.video-container {
+    max-width: 900px;
+    margin: 2em auto 0;
+    overflow: hidden;
+    border: 2px solid #E89B58;
+    border-radius: 10px;
+    background-color: #19110A;
+}
+
+.video-container video {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
